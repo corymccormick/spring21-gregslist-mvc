@@ -5,9 +5,11 @@ import { api } from "./AxiosService.js";
 
 class CarsService {
   async getCars() {
+    // await means that the rest of the function will not continue UNTIL you get your response back
     let res = await api.get('cars')
-    console.log(res.data)
-    ProxyState.cars = res.data.map(c => new Car(c))
+    console.log(response.data)
+    // the map function takes one array and runs the function on every element to create a new array of transformed elements
+    ProxyState.cars = response.data.map(c => new Car(c))
   }
 
   async createCar(newCar) {
