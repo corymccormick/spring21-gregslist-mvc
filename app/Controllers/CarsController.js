@@ -15,6 +15,7 @@ function _draw() {
 //Public
 export default class CarsController {
   constructor() {
+    // this function is only called when the events are emitted from ProxyState
     ProxyState.on('cars', _draw);
 
     // REVIEW
